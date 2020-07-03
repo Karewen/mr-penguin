@@ -17,17 +17,19 @@ module.exports = {
      .then(result => result.json())
      .then(async json => {
        
-       let forecastWordNow = json.forecastWordNow
+       let forecastWordNow = json.forecastWordNow;
        
-       let forecastMessage = json.forecastMessages['english']
+       let forecastMessage = json.forecastMessages['english'];
+       
+       let mainColorShadeNow = json.mainColorShadeNow;
        
        let embed = new Discord.MessageEmbed()
        .setTitle(`Loot Forecaster`)
-       .setColor("RANDOM")
+       .setColor(mainColorShadeNow)
        .addField(`Loot availability:`, forecastWordNow)
        .addField(`Farmer's Forcast:`, forecastMessage)
        .addField(`Credits to:`, "[Clash of Clans Forecaster](http://clashofclansforecaster.com/)")
-       .setFooter(`Created by: ${owner.tag}`, owner.displayAvatarURL())
+       .setFooter(`Bot owner: ${owner.tag}`, owner.displayAvatarURL())
        
        message.channel.send(embed)
        
