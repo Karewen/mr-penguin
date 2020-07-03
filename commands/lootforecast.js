@@ -3,7 +3,7 @@ const Discord = require(`discord.js`)
 const fetch = require('node-fetch');
 
 module.exports = {
-	name: 'loot forecast',
+	name: 'lootforecast',
 	aliases: ['lf'],
   	cooldown: 0.5,
 	description: 'Loot status.',
