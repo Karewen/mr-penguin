@@ -29,7 +29,7 @@ module.exports = {
        .addField(`Loot availability:`, forecastWordNow)
        .addField(`Farmer's Forcast:`, forecastMessage)
        .addField(`Credits to:`, "[Clash of Clans Forecaster](http://clashofclansforecaster.com/)")
-       .setFooter(`Bot created by: ${owner.tag}`, owner.displayAvatarURL())
+       .setFooter(`Bot creator: ${owner.tag}`, owner.displayAvatarURL())
        
        message.channel.send(embed)
        
