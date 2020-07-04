@@ -21,7 +21,7 @@ const cooldowns = new Discord.Collection();
 
 client.on('ready', () => {
     console.log(`I am ready and online as ${client.user.tag}`)
-    client.user.setActivity("loot statistics.", {type: "WATCHING"})
+    client.user.setActivity(`~help on ${client.guilds.cache.size} servers.`, {type: "WATCHING"})
 })
 
 client.on('message', message => {
