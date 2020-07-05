@@ -24,10 +24,17 @@ client.on('ready', () => {
     client.user.setActivity(`~help on ${client.guilds.cache.size} servers.`, {type: "WATCHING"})
 })
 
+client.on("guildCreate", guild => {
+    async function restart(){
+	await process.exit(1)
+    }
+    restart()
+})
+
 client.on('message', message => {
       let prefix = "~"
   
-      if (!message.content.startsWith(prefix) || message.author.bot) return;
+      if (!message.content.startsWith(prefix) || message.author.bot || message.channel.type === "dm") return;
   
       const args = message.content.slice(prefix.length).split(/ +/);
       const commandName = args.shift().toLowerCase();
