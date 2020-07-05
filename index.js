@@ -24,14 +24,6 @@ client.on('ready', () => {
     client.user.setActivity(`~help on ${client.guilds.cache.size} servers.`, {type: "WATCHING"})
 });
 
-client.on("guildCreate", guild => {
-   process.exit(1)
-});
-
-client.on("guildDelete", guild => {
-    process.exit(1)
-});
-
 client.on('message', message => {
       let prefix = "~"
   
