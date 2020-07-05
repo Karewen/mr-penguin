@@ -24,15 +24,17 @@ client.on('ready', () => {
     client.user.setActivity(`~help on ${client.guilds.cache.size} servers.`, {type: "WATCHING"})
 });
 
-async function restart(){
-   await process.exit(1)
-};
-
 client.on("guildCreate", guild => {
+    async function restart(){
+      await process.exit(1)
+    };
     restart();
 });
 
 client.on("guildDelete", guild => {
+    async function restart(){
+      await process.exit(1)
+    };
     restart();
 });
 
