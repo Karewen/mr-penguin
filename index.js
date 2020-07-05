@@ -25,13 +25,11 @@ client.on('ready', () => {
 });
 
 client.on("guildCreate", guild => {
-   client.destroy()
-   .then(() => client.login(process.env.token))
+   process.exit(1)
 });
 
 client.on("guildDelete", guild => {
-    client.destroy()
-   .then(() => client.login(process.env.token))
+    process.exit(1)
 });
 
 client.on('message', message => {
