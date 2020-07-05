@@ -25,17 +25,13 @@ client.on('ready', () => {
 });
 
 client.on("guildCreate", guild => {
-    async function restart(){
-      await process.exit(1)
-    };
-    restart();
+   client.destroy()
+   .then(() => client.login(process.env.token))
 });
 
 client.on("guildDelete", guild => {
-    async function restart(){
-      await process.exit(1)
-    };
-    restart();
+    client.destroy()
+   .then(() => client.login(process.env.token))
 });
 
 client.on('message', message => {
