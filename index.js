@@ -25,7 +25,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-      let prefix = "~"
+      let prefix = "~";
   
       if (!message.content.startsWith(prefix) || message.author.bot || message.channel.type === "dm") return;
   
